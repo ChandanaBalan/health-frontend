@@ -62,7 +62,7 @@ function Home() {
 
   return (
     <>
-      <div className='bg-white' style={{marginBottom:"260px"}}>
+      <div className='bg-white'  >
         <div className='container-fluid'>
           <div className="row">
             <img src="https://static.vecteezy.com/system/resources/previews/006/712/985/non_2x/abstract-health-medical-science-healthcare-icon-digital-technology-science-concept-modern-innovation-treatment-medicine-on-hi-tech-future-blue-background-for-wallpaper-template-web-design-vector.jpg" alt="no img" style={{ width: "100%", height: "50vh" }} className='p-0' />

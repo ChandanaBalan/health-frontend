@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Landingpage() {
   return (
     <>
-      <div className='bg-white' style={{marginTop:"110px", marginBottom:"250px"}}>
+      <div className='bg-white' style={{marginTop:"110px"}}>
         <div className='container py-5'  >
           <div className='row align-items-center justify-content-between' >
             <div className="col-md-6 text-center text-md-start">
@@ -14,7 +14,7 @@ function Landingpage() {
               </h1>
               <p className=' p-3 p-md-0'>
                 You can get the care you need 24/7 – be it online or in <br />
-                person. You will be treated by caring specialist doctors.
+                person. Your data will be safe here.
               </p>
               <div className='d-flex justify-content-center justify-content-md-start'>
                 <Link to={'/register'}><button className='rounded-pill btn btn-primary text-white me-2'>Register</button></Link>

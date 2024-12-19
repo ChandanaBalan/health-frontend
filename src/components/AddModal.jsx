@@ -80,10 +80,10 @@ function AddModal({setAddStatus}) {
               <input type="date" className="form-control" id="date" name="date" required style={inputStyle} />
             </div>
 
-            <div className="mb-3">
+            {/* <div className="mb-3">
               <label htmlFor="file" className="form-label">Upload File</label>
               <input type="file" className="form-control" id="file" name="file" style={inputStyle} />
-            </div>
+            </div> */}
 
             <div className="text-end">
               <button type="button" className="btn btn-secondary me-2" onClick={handleClose}>Close</button>

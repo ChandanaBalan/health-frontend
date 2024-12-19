@@ -78,7 +78,8 @@ function Recyclebin() {
                         onClick={() => handleRestore(item.id)}
                       >
                         Restore
-                      </Button><Button variant="danger" onClick={() => handlePermanentDelete(item.id)}>Delete</Button></td>
+                      </Button>
+                      <Button variant="danger" onClick={() => handlePermanentDelete(item.id)}>Delete</Button></td>
               </tr>
               ))
                 }

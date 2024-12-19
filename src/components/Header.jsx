@@ -1,9 +1,9 @@
-import { faNotesMedical, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faNotesMedical, faPowerOff, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
-import Dropdown from 'react-bootstrap/Dropdown';
 import { Link, useLocation ,useNavigate } from 'react-router-dom';
 import { getUserData } from '../services/allApi';
+
 
 
 function Header() {
@@ -43,27 +43,7 @@ function Header() {
               <Link to={'/'} style={{textDecoration:"none"}}><h1><FontAwesomeIcon icon={faNotesMedical} style={{ color: "black" }} className='me-3' />Healthy you.</h1></Link>
               <div>
                 {!isExcludedPage && (
-                   <Dropdown>
-                   <Dropdown.Toggle className='bg-white text-black' id="dropdown-basic">
-                   <FontAwesomeIcon icon={faUser} className='me-2'  />Profile
-                   </Dropdown.Toggle>
-     
-                   <Dropdown.Menu className='bg-white'>
-                     <div className='row '>
-                      <div className="col-2"></div>
-                      <div className="col-8 d-flex justify-content-center align-items-center flex-column p-3">
-                      <div className="mb-2 ">
-                            <label htmlFor="file" className="form-label">Upload File</label>
-                            <input type="file" className="form-control" id="file" name="file" style={inputStyle}  />
-                            </div>
-                      <h5 className='text-black mt-4'>Username</h5>
-                      <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
-                      </div>
-                      <div className="col-2"></div>
-                      
-                     </div>
-                   </Dropdown.Menu>
-                 </Dropdown>
+                  <button className='btn btn-danger' onClick={handleLogout}><FontAwesomeIcon icon={faPowerOff} className='me-2' />Logout</button>
                 )
               }
               </div>

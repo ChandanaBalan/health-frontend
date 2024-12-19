@@ -3,8 +3,11 @@ import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import EditModal from '../components/EditModal';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getDataByIdAPI } from '../services/allApi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -79,20 +82,20 @@ function Viewdetails() {
     <>
 
 
-      <div className='bg-white container-fluid' style={{ marginTop: "110px", marginBottom: "260px" }}>
+      <div className='bg-white container-fluid' style={{ marginTop: "110px", height: "200vh" }}>
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-6 my-5 px-md-0 px-5">
 
 
-            <div className='row p-2 rounded' style={{ marginTop: "10px", border: "2px solid rgb(84, 194, 255)" }}>
+            <div className='row p-2 rounded' style={{ marginTop: "1px", border: "2px solid rgb(84, 194, 255)" }}>
               <div className="col-6">
                 <div className='w-100'>
-                  <h4 className='text-black' style={{ textAlign: "right" }}>Health Condition : {editdata.condition}</h4>
+                  <h4 className='text-black' style={{ textAlign: "right" }}>Health Condition : </h4>
                 </div>
               </div>
               <div className="col-6">
-                <h4><strong> Infection</strong></h4>
+                <h4 className='text-black'><strong> {editdata.condition}</strong></h4>
               </div>
             </div>
             <div className='row p-2 rounded' style={{ marginTop: "1px", border: "2px solid rgb(84, 194, 255)" }}>
@@ -166,11 +169,24 @@ function Viewdetails() {
 
 
 
-                <div className='w-100 d-flex justify-content-end px-5'>
+
+              </div>
+            </div>
+
+            <div className='row p-2 rounded' style={{ marginTop: "1px", border: "2px solid rgb(84, 194, 255)" }}>
+              <div className="col-6">
+
+              </div>
+              <div className="col-6 ">
+
+                <div className='w-100 d-flex justify-content-end '>
+                  <div className='me-3'>
+                    < EditModal setEditData={setEditData} />
+                  </div>
 
                   <label
                     htmlFor="file-upload"
-                    className="rounded btn btn-primary p-2 mt-2 bg-white text-primary"
+                    className="rounded btn btn-primary  bg-white text-primary"
                     style={{ cursor: 'pointer' }}
                   >
                     Upload file
@@ -182,15 +198,18 @@ function Viewdetails() {
                     style={{ display: 'none' }}
                     onChange={handleFileUpload}
                   />
+                  <div className='d-flex justify-content-end  ms-3 pt-1'>
+
+                    <Link to={'/home'}><h5 className='text-black'> <FontAwesomeIcon icon={faHouse} /></h5></Link>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
           <div className="col-md-3"></div>
         </div >
-        <div className='text-center mb-5'>
-          < EditModal setEditData={setEditData} />
-        </div>
+
 
 
         {/* Full-Screen Modal */}

@@ -22,13 +22,13 @@ function Footer() {
         <footer className="text-white py-4">
           <Container>
             <Row>
-              <Col md={3} className="text-light">
+              <Col md={4} className="text-light p-4">
                 <h4>ABOUT US</h4>
-                <p>
+                <p style={{textAlign:"justify"}} >
                   We are dedicated to promoting health and wellness. Our mission is to empower individuals with the knowledge and tools needed for a balanced lifestyle.
                 </p>
               </Col>
-              <Col md={3} className="text-light">
+              <Col md={2} className="text-light p-4">
                 <h4>GUIDES</h4>
                 <ul className="list-unstyled">
                   <li>Community</li>
@@ -36,16 +36,16 @@ function Footer() {
                   <li>Support Policy</li>
                 </ul>
               </Col>
-              <Col md={3} className="text-light">
+              <Col md={2} className="text-light p-4">
                 <h4>LINKS</h4>
                 <ul className="list-unstyled">
                   <li><Link to="/" className="text-light text-decoration-none">Home</Link></li>
-                  <li><Link to="/recyclebin" className="text-light text-decoration-none">Recyclebin</Link></li>
-                  <li><Link to="/details" className="text-light text-decoration-none">Details</Link></li>
+                  <li><Link to="/home/recyclebin" className="text-light text-decoration-none">Recyclebin</Link></li>
+                  <li><Link to="/home/viewdetails/:id" className="text-light text-decoration-none">Details</Link></li>
                 </ul>
               </Col>
-              <Col md={3}>
-                <h4 className="text-light">SUBSCRIBE</h4>
+              <Col md={4} className='p-4'>
+                <h4 className="text-light ">SUBSCRIBE</h4>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="border mb-3">
                     <Form.Control 

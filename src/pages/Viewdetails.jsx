@@ -32,28 +32,7 @@ function Viewdetails() {
     file: null
   });
 
-  useEffect(() => {
-    const fetchDetails = async () => {
-      try {
-        const response = await getDataByIdAPI(id);
-        const fetchedData = response.data;
-        console.log(fetchedData);
-        if (fetchedData) {
-          setEditData({
-            condition: fetchedData.condition || "",
-            doctor: fetchedData.doctor || "",
-            description: fetchedData.description || "",
-            date: fetchedData.date || "",
-            file: null, // File will remain empty initially
-          });
-        }
-      } catch (error) {
-        console.error("Error fetching details:", error);
-      }
-    };
-
-    fetchDetails();
-  }, [id]);
+  
 
   // Handle file selection and upload
   const handleFileUpload = (event) => {
@@ -77,6 +56,31 @@ function Viewdetails() {
     setShowModal(false);
     setSelectedFile(null);
   };
+
+
+
+  useEffect(() => {
+    const fetchDetails = async () => {
+      try {
+        const response = await getDataByIdAPI(id);
+        const fetchedData = response.data;
+        console.log(fetchedData);
+        if (fetchedData) {
+          setEditData({
+            condition: fetchedData.condition || "",
+            doctor: fetchedData.doctor || "",
+            description: fetchedData.description || "",
+            date: fetchedData.date || "",
+            file: null, // File will remain empty initially
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching details:", error);
+      }
+    };
+
+    fetchDetails();
+  }, [id]);
 
   return (
     <>

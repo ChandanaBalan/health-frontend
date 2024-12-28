@@ -29,7 +29,19 @@ function Header() {
    };
 
   useEffect(()=>{
-    getUserData()
+    const fetchUserData = async () => {
+      const userId = localStorage.getItem("userId"); // Get user ID from storage
+      if (userId) {
+        try {
+          const response = await getUserData(userId); // Fetch user data from API
+          setUser(response.data); // Set the user state
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        }
+      }
+    };
+
+    fetchUserData();
   },[])
 
   return (

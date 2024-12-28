@@ -87,6 +87,7 @@ function EditModal() {
             console.log("Data Updated:", formData);
             handleClose();
             fetchDetails();
+            window.location.reload();
         } catch (error) {
             console.error("Error updating data:", error);
         }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate, useParams } from "react-router-dom";
 import { getDataByIdAPI, updateData } from "../services/allApi";
 
@@ -64,9 +64,9 @@ function EditModal() {
     };
 
     // Handle file input separately
-    const handleFileChange = (e) => {
-        setEditData({ ...editdata, file: e.target.files[0] });
-    };
+    // const handleFileChange = (e) => {
+    //     setEditData({ ...editdata, file: e.target.files[0] });
+    // };
 
     // Handle form submission
     const handleSubmit = async (e) => {
@@ -166,7 +166,7 @@ function EditModal() {
                             />
                         </div>
 
-                        <div className="mb-3">
+                        {/* <div className="mb-3">
                             <label htmlFor="file" className="form-label">Upload File</label>
                             <input
                                 type="file"
@@ -176,12 +176,10 @@ function EditModal() {
                                 onChange={handleFileChange}
                                 style={inputStyle}
                             />
-                        </div>
+                        </div> */}
 
                         <div className="text-end">
-                            <button className="btn btn-danger me-2" type="button">
-                                <FontAwesomeIcon icon={faTrashCan} color="#ffffff" />
-                            </button>
+                            
                             <button type="button" className="btn btn-secondary me-2" onClick={handleClose}>
                                 Close
                             </button>

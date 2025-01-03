@@ -59,7 +59,7 @@ function Recyclebin() {
         <div className="col-md-2"></div>
         <div className="col-md-8 table-responsive">
         
-          <table className='table table-bordered mt-5'>
+          {recycledData.length>0?<table className='table table-bordered mt-5'>
             <thead>
               <tr>
                 <th className='text-center'>No.</th>
@@ -86,6 +86,10 @@ function Recyclebin() {
               
             </tbody>
           </table>
+:
+          <div>
+                <h4 className='text-black text-center mt-5'>Recycle bin is empty.</h4>
+          </div>}
           <div className='d-flex justify-content-end  px-5'>
              
              <Link to={'/home'}><h5 className='text-black'> <FontAwesomeIcon icon={faHouse} /> Back Home</h5></Link>

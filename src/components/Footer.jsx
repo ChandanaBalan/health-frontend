@@ -25,7 +25,7 @@ function Footer() {
               <Col md={4} className="text-light p-4">
                 <h4>ABOUT US</h4>
                 <p style={{textAlign:"justify"}} >
-                  We are dedicated to promoting health and wellness. Our mission is to empower individuals with the knowledge and tools needed for a balanced lifestyle.
+                We provide a secure, user-friendly platform for managing health records and tracking wellness. Our goal is to simplify healthcare management for individuals of all ages.
                 </p>
               </Col>
               <Col md={2} className="text-light p-4">

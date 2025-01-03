@@ -12,9 +12,9 @@ function Landingpage() {
                 We're <span className='fw-bolder text-primary-emphasis'>determined</span> for <br />
                 your <span className='fw-bolder text-primary-emphasis'>better life</span>.
               </h1>
-              <p className=' p-3 p-md-0'>
-                You can get the care you need 24/7 – be it online or in <br />
-                person. Your data will be safe here.
+              <p className=' p-3 pe-md-5 p-md-0'>
+              Your Health, Our Priority
+              Stay organized, track your wellness, and make health management simple and secure with us.
               </p>
               <div className='d-flex justify-content-center justify-content-md-start'>
                 <Link to={'/register'}><button className='rounded-pill btn btn-primary text-white me-2'>Register</button></Link>
@@ -48,7 +48,7 @@ function Landingpage() {
                 We've built a healthcare system that puts your needs first.
               </h3>
               <p className=' p-3 p-md-0'>
-                Our system is designed to help you get the best care possible, with features tailored to your needs. Whether you need virtual consultations or in-person care, we've got you covered.
+              Securely store and track medical records, prescriptions, and appointments, while keeping complete health histories accessible. Designed for convenience, our platform empowers you to take control of your well-being.
               </p>
               <img
                 src="https://th.bing.com/th/id/OIP.z-p7vLPjwCUuvyR2dKPxIwHaE8?rs=1&pid=ImgDetMain"
